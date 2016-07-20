@@ -16,11 +16,11 @@ while 0 < guess < 20:
         break
     
     elif guess > answer:
-        print("Your guess was too high, try something lower")
+        print("Your guess was too high, try something lower.")
 
     elif guess < answer:
-        print("Your guess was too high, try something lower")
+        print("Your guess was too low, try something higher.")
 
-    else:
-        print("Error: Please type a number between 0 and 20.")
+else:
+    print("Error: Please type a number between 0 and 20.")
         
