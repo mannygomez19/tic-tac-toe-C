@@ -5,7 +5,7 @@ answer = randint(0, 20)
 
 print("I'm thinking of a number between 1 and 20.")
 
-guess = int(input("Take a guess at what number was randomly generated (press anything to continue)")) 
+guess = int(input("Take a guess at what number was randomly generated (type any number to continue)")) 
 
 while 0 < guess < 20:
 
@@ -21,6 +21,8 @@ while 0 < guess < 20:
     elif guess < answer:
         print("Your guess was too low, try something higher.")
 
-else:
-    print("Error: Please type a number between 0 and 20.")
-        
+    try:
+        guess = int(input())
+    except:
+        raise Exception("Please enter a number inbetween 0 and 20.")   
+
