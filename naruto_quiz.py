@@ -1,118 +1,175 @@
-from fractions import Fraction
+print("\nHere is a quiz to determine which Naruto character you are")
+
+sakura_points = 0
+sakura_points = int(sakura_points)
+
+naruto_points = 0
+naruto_points = int(naruto_points)
+
+kakashi_points = 0
+kakashi_points = int(kakashi_points)
+
+shikamaru_points = 0
+shikamaru_points = int(shikamaru_points)
+
+sasuke_points = 0
+sasuke_points = int(sasuke_points)
 
 print("\nHere is a quiz to determine which Naruto character you are")
 
-print("\n1) How do you manage your anger?")
+def qstn1():
+    
+    print \
+        """1) How do you manage your anger?
+              1) Physically exert your rage
+              2) Talk it out/vent
+              3) Bottle it up inside
+              4) Confront who/what is angering you
+              5) Analyze it and think it out """
 
-dictionary1 = {
-        '\ta': ' Physically exert your rage',
-        '\tb': ' Talk it out/vent',
-        '\tc': ' Bottle it up inside',
-        '\td': ' Confront who/what is angering you',
-        '\te': ' Analyze it and think it out',
-        }
+    q1 = input("\n Answer: ")
 
-for letter, answer in sorted(dictionary1.items()):
-    print(letter + ")" + answer )
+    if q1 == 1:
+        sakura_points += 1
+    elif q1 == 2:
+        naruto_points += 1
+    elif q1 == 3:
+        sasuke_points += 1
+    elif q1 == 4:
+        shikamaru_points += 1
+    elif q1 == 5:
+        kakashi_points += 1
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn1()
 
-response1 = raw_input("answer (letter only): ")
-"-----------------------------------------------------------"
+    qstn2()
+"----------------------------------------------------------------------------"
+def qstn2():
 
-print("\n2) How would you approach an opponent in a fight?")
+    print \
+        """2) How would you approach an opponent in a fight?
+              1)Observe and study their movements, strike once you see their weakness
+              2)Come at them like an uncontrollable barrage of force
+              3)Move quickly, like a blur
+              4)Allow them to exhaust themselves
+              5)Work with a partner to defeat the adversary """
+        
+    q2 = input("\n Answer: ")
 
-dictionary2 = {
-        '\ta': ' Observe and study their movements, strike once you see their weakness',
-        '\tb': ' Come at them like an uncontrollable barrage of force',
-        '\tc': ' Move quickly, like a blur',
-        '\td': ' Allow them to exhaust themselves',
-        '\te': ' Work with a partner to defeat the adversary',
-        }
+    if q2 == 1:
+        shikamaru_points += 1
+    elif q2 == 2:
+        naruto_points += 1
+    elif q2 == 3:
+        sasuke_points += 1
+    elif q2 == 4:
+        kakashi_points += 1
+    elif q2 == 5:
+        sakura_points += 1
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn2()
 
-for letter, answer in sorted(dictionary2.items()):
-    print(letter + ")" + answer )
+    qstn3()
+"---------------------------------------------------------------------------"
+def qstn3():
 
-response2 = raw_input("answer (letter only): ")
-"---------------------------------------------------------------"
-print("\n3) What animal do you identify with most?") 
+    print \
+        """3) What animal do you identify with most?
+              1)Rabbit
+              2)Crow
+              3)Tiger
+              4)Hawk
+              5)Snake """
+    q3 = input("\n Answer: ")
 
-dictionary3 = {
-        '\ta': ' Rabbit',
-        '\tb': ' Crow',
-        '\tc': ' Tiger',
-        '\td': ' Hawk',
-        '\te': ' Snake',
-        }
+    if q2 == 1:
+        sakura_points += 1
+    elif q2 == 2:
+        shikamaru_points += 1
+    elif q2 == 3:
+        naruto_points += 1
+    elif q2 == 4:
+        kakashi_points += 1
+    elif q2 == 5:
+        sasuke_points += 1
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn3()
 
-for letter, answer in sorted(dictionary3.items()):
-    print(letter + ")" + answer)
+    qstn4()
+"---------------------------------------------------------------------------"
+def qstn4():
+    print \
+        """4) What element describes you best?
+              1)Earth
+              2)Wind
+              3)Fire
+              4)Water
+              5)Lightening"""
+    q4 = input("\n Answer: ")
 
-response3 = raw_input("answer (letter only): ")
+    if q2 == 1:
+        naruto_points += 1
+    elif q2 == 2:
+        shikamaru_points += 1
+    elif q2 == 3:
+        sasuke_points += 1
+    elif q2 == 4:
+        sakura_points += 1
+    elif q2 == 5:
+        kakashi_points += 1
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn4()
+
+    qstn5()
+    
 
 "-----------------------------------------------------------------"
 
-print("\n4) What element describes you best?")
+def qstn5():
+    print \
+        """5) Which pair of words describes you best?
+              1)Serious and hardworking
+              2)Introverted and kind
+              3)Independent and blunt
+              4)Outgoing and energetic
+              5)Smart and lazy"""
+    q5 = input("\n Answer: ")
 
-dictionary4 = {
-        '\ta': ' Earth',
-        '\tb': ' Wind',
-        '\tc': ' Fire',
-        '\td': ' Water',
-        '\te': ' Lightening',
-        }
-
-for letter, answer in sorted(dictionary4.items()):
-    print(letter + ")" + answer)
-
-response4 = raw_input("answer (letter only): ")
-
-"-----------------------------------------------------------------"
-
-print("\n5) Which pair of words describes you best?")
-
-dictionary5 = {
-        '\ta': ' Serious and hardworking',
-        '\tb': ' Introverted and kind',
-        '\tc': ' Independent and blunt',
-        '\td': ' Outgoing and energetic',
-        '\te': ' Smart and lazy',
-        }
-
-for letter, answer in sorted(dictionary5.items()):
-    print(letter + ")" + answer)
-
-response5 = raw_input("answer (letter only): ")
+    
+    if q2 == 1:
+        sasuke_points += 1
+    elif q2 == 2:
+        sakura_points += 1
+    elif q2 == 3:
+        kakashi_points += 1
+    elif q2 == 4:
+        naruto_points += 1
+    elif q2 == 5:
+        shikamaru_points += 1
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn5()
 
 "-------------------------------------------------------------------"
-
-# Find a way to accept the answer and then use all of the other answers together
-# to make a personality portfolio on some1.
-
-sakura_answer_list = {'a': response1, 'e': response2, 'a': response3,
-                      'd': response4, 'b': response5}
-shikamaru_answer_list = ['d', 'a', 'b', 'b', 'e']
-kakashi_answer_list = {'e': response1, 'd': response2, 'd': response3,
-                       'e': response4, 'c': response5}
-naruto_answer_list = ['b', 'b', 'c', 'a', 'd']
-sasuke_answer_list = ['c', 'c', 'e', 'c', 'a']
-
-for key, value in sakura_answer_list.items():
-    if sakura_answer_list >= Fraction(3, 5):
-        print("Your are Sakura!") # find a way to somehow call the answers from response 1 -5 
-    else:
-        break
-
-for key, value in kakashi_answer_list.items():
-    if kakashi_answer_list >= Fraction(3, 5):
-        print("You are Kakashi Sensei!")
-        
-
-
-
-
-
-
-
-
+if sakura_points >= 3:
+    print("You are Sakura!")
+    
+if sasuke_points >= 3:
+    print("You are Sasuke!")
+    
+if kakashi_points >= 3:
+    print("You are Kakashi!")
+    
+if naruto_points >= 3:
+    print("You are Naruto!")
+    
+if shikamaru_points >= 3:
+    print("You are Shikamaru!")
+    
 
 
 
