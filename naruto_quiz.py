@@ -15,7 +15,6 @@ shikamaru_points = int(shikamaru_points)
 sasuke_points = 0
 sasuke_points = int(sasuke_points)
 
-print("\nHere is a quiz to determine which Naruto character you are")
 
 def qstn1():
     
@@ -29,27 +28,32 @@ def qstn1():
 
     q1 = input("\n Answer: ")
 
-    if q1 == 1:
+    if q1 == "1":
+        global sakura_points
         sakura_points += 1
-    elif q1 == 2:
+    elif q1 == "2":
+        global naruto_points
         naruto_points += 1
-    elif q1 == 3:
+    elif q1 == "3":
+        global sasuke_points
         sasuke_points += 1
-    elif q1 == 4:
+    elif q1 == "4":
+        global shikamaru_points
         shikamaru_points += 1
-    elif q1 == 5:
+    elif q1 == "5":
+        global kakashi_points
         kakashi_points += 1
     else:
         print("\n Please choose answer choices 1-5")
         qstn1()
+qstn1()
 
-    qstn2()
 "----------------------------------------------------------------------------"
 def qstn2():
 
     print \
         """2) How would you approach an opponent in a fight?
-              1)Observe and study their movements, strike once you see their weakness
+              1)Study their movements, strike once you see their weakness
               2)Come at them like an uncontrollable barrage of force
               3)Move quickly, like a blur
               4)Allow them to exhaust themselves
@@ -57,21 +61,27 @@ def qstn2():
         
     q2 = input("\n Answer: ")
 
-    if q2 == 1:
+    if q2 == "1":
+        global shikamaru_points
         shikamaru_points += 1
-    elif q2 == 2:
+    elif q2 == "2":
+        global naruto_points
         naruto_points += 1
-    elif q2 == 3:
+    elif q2 == "3":
+        global sasuke_points
         sasuke_points += 1
-    elif q2 == 4:
+    elif q2 == "4":
+        global kakashi_points
         kakashi_points += 1
-    elif q2 == 5:
+    elif q2 == "5":
+        global sakura_points
         sakura_points += 1
     else:
         print("\n Please choose answer choices 1-5")
         qstn2()
 
-    qstn3()
+qstn2()
+
 "---------------------------------------------------------------------------"
 def qstn3():
 
@@ -84,21 +94,27 @@ def qstn3():
               5)Snake """
     q3 = input("\n Answer: ")
 
-    if q2 == 1:
+    if q3 == "1":
+        global sakura_points
         sakura_points += 1
-    elif q2 == 2:
+    elif q3 == "2":
+        global shikamaru_points
         shikamaru_points += 1
-    elif q2 == 3:
+    elif q3 == "3":
+        global naruto_points
         naruto_points += 1
-    elif q2 == 4:
+    elif q3 == "4":
+        global kakashi_points
         kakashi_points += 1
-    elif q2 == 5:
+    elif q3 == "5":
+        global sasuke_points
         sasuke_points += 1
     else:
         print("\n Please choose answer choices 1-5")
         qstn3()
 
-    qstn4()
+qstn3()
+
 "---------------------------------------------------------------------------"
 def qstn4():
     print \
@@ -110,21 +126,26 @@ def qstn4():
               5)Lightening"""
     q4 = input("\n Answer: ")
 
-    if q2 == 1:
+    if q4 == "1":
+        global naruto_points
         naruto_points += 1
-    elif q2 == 2:
+    elif q4 == "2":
+        global shikamaru_points
         shikamaru_points += 1
-    elif q2 == 3:
+    elif q4 == "3":
+        global sasuke_points
         sasuke_points += 1
-    elif q2 == 4:
+    elif q4 == "4":
+        global sakura_points
         sakura_points += 1
-    elif q2 == 5:
+    elif q4 == "5":
+        global kakashi_points
         kakashi_points += 1
     else:
         print("\n Please choose answer choices 1-5")
         qstn4()
 
-    qstn5()
+qstn4()
     
 
 "-----------------------------------------------------------------"
@@ -140,19 +161,26 @@ def qstn5():
     q5 = input("\n Answer: ")
 
     
-    if q2 == 1:
+    if q5 == "1":
+        global sasuke_points
         sasuke_points += 1
-    elif q2 == 2:
+    elif q5 == "2":
+        global sakura_points
         sakura_points += 1
-    elif q2 == 3:
+    elif q5 == "3":
+        global kakashi_points
         kakashi_points += 1
-    elif q2 == 4:
+    elif q5 == "4":
+        global naruto_points
         naruto_points += 1
-    elif q2 == 5:
+    elif q5 == "5":
+        global shikamaru_points
         shikamaru_points += 1
     else:
         print("\n Please choose answer choices 1-5")
         qstn5()
+
+qstn5()
 
 "-------------------------------------------------------------------"
 if sakura_points >= 3:
