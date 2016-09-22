@@ -16,7 +16,8 @@ shikamaru_points = int(shikamaru_points)
 sasuke_points = 0
 sasuke_points = int(sasuke_points)
 
-"--------------------------------------------------------------"
+"-----------------------------------------------------------------"
+
 def qstn1():
     
     print \
@@ -180,81 +181,81 @@ def qstn5():
     else:
         print("\n Please choose answer choices 1-5")
         qstn5()
-
+        
 qstn5()
 
 "-------------------------------------------------------------------"
 
-while character_points():
-    print("The results are...")
+def qstn6():
+    print \
+        """6) Do you (or did you) like going to school?
+                1)Fuck no. I am too energetic to sit that long!
+                2)It's okay, but I like learning practical things
+                3)Yes! I love learning
+                4)It's okay, but it's hard to interact with so many people
+                5)No, I prefer to skip class"""
+    
+    q6 = raw_input("\n Answer: ")
+
+    if q6 == "1":
+        global naruto_points
+        naruto_points += 3
+    elif q6 == "2":
+        global kakashi_points
+        kakashi_points += 3
+    elif q6 == "3":
+        global sakura_points
+        sakura_points += 3
+    elif q6 == "4":
+        global sasuke_points
+        sasuke_points += 3
+    elif q6 == "5":
+        global shikamaru_points
+        shikamaru_points += 3
+    else:
+        print("\n Please choose answer choices 1-5")
+        qstn6()
+"----------------------------------------------------------------------"
 
 if sakura_points >= 3:
     print("You are Sakura!")
+    exit(0)
+elif sasuke_points >= 3:
+    print("You are Sasuke!")
+    exit(0)
+elif kakashi_points >= 3:
+    print("You are Kakashi!")
+    exit(0)
+elif naruto_points >= 3:
+    print("You are Naruto!")
+    exit(0)
+elif shikamaru_points >= 3:
+    print("You are Shikamaru!")
+    exit(0)
+else:                           # If none of the above characters are selected because they didnt get enough points
+	print sakura_points   # Prints out the number of points of each character
+	print sasuke_points
+	print kakashi_points
+	print naruto_points
+	print shikamaru_points
+	qstn6()
 
-if sasuke_points >= 3:
+if sakura_points >= 3:
+    print("You are Sakura!")
+    
+elif sasuke_points >= 3:
     print("You are Sasuke!")
     
-if kakashi_points >= 3:
+elif kakashi_points >= 3:
     print("You are Kakashi!")
     
-if naruto_points >= 3:
+elif naruto_points >= 3:
     print("You are Naruto!")
     
-if shikamaru_points >= 3:
+elif shikamaru_points >= 3:
     print("You are Shikamaru!")
-
-elif character_points() < 3:
-    def qstn6():
-        print \
-            """6) Do you (or did you) like going to school?
-                  1)Fuck no. I am too energetic to sit that long!
-                  2)It's okay, but I like learning practical things
-                  3)Yes! I love learning
-                  4)It's okay, but find it hard to interact with so many people
-                  5)No, I prefer to skip class"""
-        q6 = raw_input("\n Answer: ")
-
     
-        if q6 == "1":
-            global naruto_points
-            naruto_points += 2
-        elif q6 == "2":
-            global kakashi_points
-            kakashi_points += 2
-        elif q6 == "3":
-            global sakura_points
-            sakura_points += 2
-        elif q6 == "4":
-            global sasuke_points
-            sasuke_points += 2
-        elif q6 == "5":
-            global shikamaru_points
-            shikamaru_points += 2
-        else:
-            print("\n Please choose answer choices 1-5")
-            qstn6()
-
-    qstn6()
-
-    if sakura_points >= 4:
-        print("You are Sakura!")
-    if naruto_points >= 4:
-        print("You are Naruto!")
-    if kakashi_points >= 4:
-        print("You are Kakashi!")
-    if shikamaru_points >= 4:
-        print("You are Shikamaru!")
-    if sasuke_points >= 4:
-        print("You are Sasuke!")
-
-character_points()       
-
-
-
-
-
-
-
-
+else:
+    print("You are no one!")
 
 
